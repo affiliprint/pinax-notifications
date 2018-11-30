@@ -26,7 +26,7 @@ class LanguageStoreNotAvailable(Exception):
 @python_2_unicode_compatible
 class NoticeType(models.Model):
 
-    label = models.CharField(_("label"), max_length=40)
+    label = models.CharField(_("label"), max_length=40, unique=True)
     display = models.CharField(_("display"), max_length=50)
     description = models.CharField(_("description"), max_length=100)
 
